@@ -2,6 +2,8 @@ pipeline {
     agent any
 
     environment {
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
         AWS_REGION = 'ap-south-2'
         ECR_REPO = '239762172856.dkr.ecr.ap-south-2.amazonaws.com/java-app'
         IMAGE_TAG = 'v1'
